@@ -1,7 +1,7 @@
 # manjaro-dotfiles
 Follows the `--bare` git repository approach for tracking dotfiles. Credit: https://www.atlassian.com/git/tutorials/dotfiles
 
-## Fresh machine setup
+## Fresh installation
 After your installation is complete lets get our dotfiles setup.
 
 1. Setup `dotfiles` alias.
@@ -22,6 +22,15 @@ dotfiles branch -m master main
 
 3. Run sync to update system and packages
 ```
+./sync.bash install
+```
+
+## Existing installation
+To keep an existing installation up-to-date run
+
+```bash
+# make sure you have a clean dotifles directory
+dotfiles pull origin main
 ./sync.bash
 ```
 

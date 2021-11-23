@@ -16,5 +16,6 @@ echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> 
 ```
 dotfiles remote add origin git@github.com:aclevername/manjaro-dotfiles.gi
 dotfiles pull origin main
+dotfiles branch -m master main
 ```
 

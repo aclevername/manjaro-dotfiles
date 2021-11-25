@@ -32,6 +32,7 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:~/bin"
 export EDITOR="nvim"
 export GIT_EDITOR="nvim"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 if [ -f ~/.aliases ]; then
     source ~/.aliases

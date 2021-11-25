@@ -33,6 +33,10 @@ function freshInstall() {
   print "setting up docker"
   sudo systemctl start docker.service
   sudo systemctl enable docker.service
+
+  print "setting up ssh-agent"
+  systemctl --user enable ssh-agent
+  systemctl --user start ssh-agent
 }
 
 print "updating all packages"

@@ -34,3 +34,5 @@ dotfiles pull origin main
 ./sync.bash
 ```
 
+## Manually installed
+- autojump

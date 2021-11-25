@@ -29,17 +29,21 @@ function freshInstall() {
 
   print "setting oh-my-zsh"
   installZSH
-}
 
-if [ ${1-nope} == "install" ]; then
-  freshInstall
-fi
+  print "setting up docker"
+  sudo systemctl start docker.service
+  sudo systemctl enable docker.service
+}
 
 print "updating all packages"
 sudo pacman -Syu --noconfirm
 
 print "installing listed packages"
 grep -v "^#" pacman | sudo pacman -S --needed --noconfirm -
+
+if [ ${1-nope} == "install" ]; then
+  freshInstall
+fi
 
 print "updating oh-my-zsh"
 sudo pacman -Syu --noconfirm
